@@ -7,7 +7,7 @@ MaxHealthBoostItem::MaxHealthBoostItem(std::string name, double effectValue) : I
 // }
 
 void MaxHealthBoostItem::applyToTank(Tank& tank) const {
-    double amount = tank.getMaxHealth() * effectValue * 1.6;
+    double amount = tank.getMaxHealth() * effectValue * 1.5;
     increaseMaxHealth(tank, amount);
 }
 

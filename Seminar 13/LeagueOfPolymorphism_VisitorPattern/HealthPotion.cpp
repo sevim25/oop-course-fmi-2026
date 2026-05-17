@@ -7,7 +7,7 @@ HealthPotion::HealthPotion(const std::string& name, double effectValue) : Item(n
 // }
 
 void HealthPotion::applyToTank(Tank& tank) const {
-    double amount = tank.getMaxHealth() * effectValue * 1.5;
+    double amount = tank.getMaxHealth() * effectValue * 1.2;
     heal(tank, amount);
 }
 

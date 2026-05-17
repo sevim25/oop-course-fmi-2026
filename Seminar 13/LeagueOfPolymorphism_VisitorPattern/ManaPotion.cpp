@@ -12,7 +12,7 @@ void ManaPotion::applyToWarrior(Warrior& warrior) const {
 
 void ManaPotion::applyToMage(Mage& mage) const {
     double amount = mage.getMaxHealth() * effectValue;
-    heal(mage, amount);
+    restoreMana(mage, amount);
 }
 
 // std::unique_ptr<Item> ManaPotion::clone() const {

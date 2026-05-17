@@ -12,11 +12,11 @@ void AbilityPowerBoostItem::applyToMage(Mage& mage) const {
 }
 
 void AbilityPowerBoostItem::applyToTank(Tank& tank) const {
-    double amount = tank.getAbilityPower() * effectValue * 0.35;
+    double amount = tank.getAbilityPower() * effectValue * 0.3;
     increaseAbilityPower(tank, amount);
 }
 
 void AbilityPowerBoostItem::applyToWarrior(Warrior& warrior) const {
-    double amount = warrior.getAbilityPower() * effectValue * 0.5;
+    double amount = warrior.getAbilityPower() * effectValue * 0.25;
     increaseAbilityPower(warrior, amount);
 }
