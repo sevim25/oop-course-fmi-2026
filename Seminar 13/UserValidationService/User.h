@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <ostream>
 
 class User {
 public:
@@ -17,3 +18,5 @@ private:
 
     friend class PasswordValidator;
 };
+
+std::ostream& operator<<(std::ostream& os, const User& user);

@@ -19,15 +19,6 @@ void printValidationErrors(const std::vector<std::string>& errors) {
     }
 }
 
-void printUser(const User& user) {
-    std::cout
-        << "User("
-        << "username = " << user.getUsername()
-        << ", email = " << user.getEmail()
-        << ", age = " << user.getAge()
-        << ")\n";
-}
-
 void tryAddUser(UsersSystem& system, const User& user) {
     try {
         system.addUser(user);
@@ -57,7 +48,7 @@ void tryFindUser(const UsersSystem& system, const std::string& username) {
 
     if (user.has_value()) {
         std::cout << "Found user:\n";
-        printUser(user.value());
+        std::cout << user.value();
     }
     else {
         std::cout << "User with username " << username << " was not found.\n";
@@ -73,7 +64,7 @@ void printAllUsers(const UsersSystem& system) {
     }
 
     for (const User& user : users) {
-        printUser(user);
+        std::cout << user;
     }
 }
 
